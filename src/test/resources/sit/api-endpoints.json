@@ -1,0 +1,3 @@
+{
+	"petstore": "http://petstore-demo-endpoint.execute-api.com/petstore/pets"
+}
