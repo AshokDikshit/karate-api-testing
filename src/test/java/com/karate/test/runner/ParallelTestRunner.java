@@ -16,14 +16,15 @@ import org.apache.commons.io.FileUtils;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
-//@RunWith(Karate.class)
-//@KarateOptions(features = "classpath:test/petstore/api/", tags = { "@test", "~@manual", "~@ignore", "~@shadow" })
+@RunWith(Karate.class)
+@KarateOptions(features = "classpath:test/petstore/api/", tags = { "@test", "~@manual", "~@ignore", "~@shadow" })
 public class ParallelTestRunner {
-//	String karateOutputPath = "target/reports";
+	String karateOutputPath = "target/reports";
 	@Test
 	public void testParallel() {
-		System.setProperty("karate.env", "demo");
-		Results results = Runner.path("classpath:test/petstore/api").tags("@test", "~@manual", "~@ignore", "~@shadow").parallel(4);
+		System.setProperty("karate.env", "dev");
+		Results results = Runner.parallel(getClass(), 2 , karateOutputPath);
+//		Results results = Runner.path("classpath:test/petstore/api").tags("@test", "~@manual", "~@ignore", "~@shadow").parallel(4);
 		generateReport(results.getReportDir());
 		assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
 	}
