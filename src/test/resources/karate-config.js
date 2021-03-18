@@ -1,8 +1,10 @@
 function() {
 	var env = karate.env;
-	karate.log('karate.env system property is:', env);
 	if (!env) {
 	    env = 'dev'; // set default environment
+	    karate.log('karate.env system property is null, default env:', env);
+	}else{
+		karate.log('karate.env system property is:', karate.env);
 	}
 	var config = {
 			env: karate.env,
