@@ -1,4 +1,4 @@
-package com.karate.test.runner;
+package runner;
 
 import com.intuit.karate.KarateOptions;
 import com.intuit.karate.junit4.Karate;

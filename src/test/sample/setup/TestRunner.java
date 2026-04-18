@@ -1,4 +1,4 @@
-package com.karate.common;
+package sample.setup;
 
 import com.intuit.karate.KarateOptions;
 import com.intuit.karate.junit4.Karate;

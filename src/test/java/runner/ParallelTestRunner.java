@@ -1,4 +1,4 @@
-package com.karate.test.runner;
+package runner;
 
 import static org.junit.Assert.assertTrue;
 

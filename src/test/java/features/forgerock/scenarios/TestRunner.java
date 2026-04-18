@@ -1,4 +1,4 @@
-package test.forgerock.api;
+package features.forgerock.scenarios;
 
 import com.intuit.karate.KarateOptions;
 import com.intuit.karate.junit4.Karate;
